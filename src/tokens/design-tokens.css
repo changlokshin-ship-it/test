@@ -1,0 +1,62 @@
+/**
+ * Design Tokens — SSOT
+ *
+ * 이 파일은 프로젝트의 유일한 시각 값 출처(Single Source of Truth)다.
+ * 현재는 Figma 미연동 상태의 중립 기본값이며, token-guardian 에이전트가
+ * Figma 변수와 동기화하면서 이 값들을 실제 디자인 시스템 값으로 갱신한다.
+ *
+ * 규칙은 ./README.md 참고.
+ */
+
+@theme {
+  /* Color — Figma 실제 데이터로 동기화됨. ./colors.tokens.css 참고 (이 파일에서는 정의하지 않음). */
+
+  /* Spacing — Tailwind 기본 배수 스케일 유지 */
+  --spacing: 0.25rem;
+  /* Spacing — 의미 기반 별칭 */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Typography — font family */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typography — font size (+ line-height) */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+
+  /* Typography — font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Breakpoint */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}

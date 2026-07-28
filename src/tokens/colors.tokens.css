@@ -1,0 +1,115 @@
+/**
+ * Color Tokens — Figma 동기화됨
+ *
+ * 출처: Figma "[NHN] 실습 디자인시스템 (Copy)"
+ *   fileKey=TsK9PNhDrcyBIRYiEWs0Pr, node-id=146:10144 (get_variable_defs)
+ *
+ * 구조: Primitive(값 자체) → Semantic(용도, Primitive 참조).
+ * 컴포넌트는 Semantic 토큰만 참조한다. Primitive를 직접 쓰지 않는다.
+ * 매핑 테이블은 ../../docs/design-tokens.md 참고.
+ */
+
+@theme {
+  /* Primitive — static */
+  --color-static-white: #ffffff;
+  --color-static-black: #222222;
+
+  /* Primitive — blue */
+  --color-blue-100: #e9f1ff;
+  --color-blue-200: #c8dcff;
+  --color-blue-300: #a6c6ff;
+  --color-blue-400: #84b1ff;
+  --color-blue-500: #609afe;
+  --color-blue-600: #377cf4;
+  --color-blue-700: #125de6;
+  --color-blue-800: #1446c8;
+  --color-blue-900: #162faa;
+
+  /* Primitive — neutral */
+  --color-neutral-100: #f9f9f9;
+  --color-neutral-200: #f4f4f4;
+  --color-neutral-300: #eeeeee;
+  --color-neutral-400: #e5e5e5;
+  --color-neutral-500: #dddddd;
+  --color-neutral-600: #cccccc;
+  --color-neutral-700: #aaaaaa;
+  --color-neutral-800: #777777;
+  --color-neutral-850: #444444;
+  --color-neutral-900: #555555;
+
+  /* Primitive — red */
+  --color-red-100: #fff0f0;
+  --color-red-200: #ffd6d6;
+  --color-red-300: #ffadad;
+  --color-red-500: #e14040;
+  --color-red-700: #b31111;
+
+  /* Primitive — green */
+  --color-green-100: #f2ffe8;
+  --color-green-200: #c4eed4;
+  --color-green-300: #6fd395;
+  --color-green-500: #1ca653;
+  --color-green-700: #1a7a33;
+
+  /* Primitive — purple */
+  --color-purple-100: #f6e9ff;
+  --color-purple-200: #e2c4ff;
+  --color-purple-300: #bf84f5;
+  --color-purple-500: #9421db;
+  --color-purple-700: #6b18a0;
+
+  /* Semantic — fill */
+  --color-fill-white: var(--color-static-white);
+  --color-fill-default: var(--color-static-black);
+  --color-fill-primary-01: var(--color-blue-700);
+  --color-fill-primary-02: var(--color-blue-800);
+  --color-fill-secondary-01: var(--color-neutral-800);
+  --color-fill-secondary-02: var(--color-neutral-900);
+  --color-fill-tertiary-01: var(--color-neutral-100);
+  --color-fill-subtle: var(--color-neutral-100);
+  --color-fill-muted: var(--color-neutral-400);
+
+  /* Semantic — text */
+  --color-text-default: var(--color-static-black);
+  --color-text-secondary: var(--color-neutral-900);
+  --color-text-primary: var(--color-blue-700);
+  --color-text-disabled: var(--color-neutral-700);
+
+  /* Semantic — bg */
+  --color-bg-canvas: var(--color-static-white);
+  --color-bg-surface: var(--color-neutral-100);
+  --color-bg-subtle: var(--color-neutral-200);
+  --color-bg-muted: var(--color-neutral-400);
+  --color-bg-inverse: var(--color-neutral-850);
+
+  /* Semantic — border */
+  --color-border-subtle: var(--color-neutral-300);
+  --color-border-default: var(--color-neutral-500);
+  --color-border-medium: var(--color-neutral-600);
+  --color-border-strong: var(--color-neutral-700);
+  --color-border-primary: var(--color-blue-700);
+  --color-border-caution: var(--color-red-700);
+  --color-border-inverse: var(--color-static-white);
+
+  /* Semantic — icon */
+  --color-icon-default: var(--color-static-black);
+  --color-icon-subtle: var(--color-neutral-700);
+  --color-icon-accent: var(--color-blue-700);
+  --color-icon-on-white: var(--color-neutral-100);
+  --color-icon-tertiary: var(--color-neutral-500);
+
+  /* Semantic — interactive */
+  --color-interactive-primary: var(--color-blue-700);
+  --color-interactive-hover: var(--color-blue-800);
+  --color-interactive-light: var(--color-blue-100);
+
+  /* Semantic — status */
+  --color-status-critical: var(--color-red-500);
+  --color-status-critical-surface: var(--color-red-100);
+  --color-status-success: var(--color-green-500);
+  --color-status-success-surface: var(--color-green-100);
+  --color-status-urgent: var(--color-purple-500);
+  --color-status-urgent-surface: var(--color-purple-100);
+  --color-status-info: var(--color-blue-400);
+  --color-status-info-surface: var(--color-blue-100);
+}
