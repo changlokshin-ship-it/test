@@ -2,40 +2,35 @@
  * Design Tokens — SSOT
  *
  * 이 파일은 프로젝트의 유일한 시각 값 출처(Single Source of Truth)다.
- * 현재는 Figma 미연동 상태의 중립 기본값이며, token-guardian 에이전트가
- * Figma 변수와 동기화하면서 이 값들을 실제 디자인 시스템 값으로 갱신한다.
+ * color/spacing/radius/shadow는 각각 ./colors.tokens.css, ./spacing.tokens.css,
+ * ./radius.tokens.css, ./effects.tokens.css로 이전되어 이 파일에서는 정의하지
+ * 않는다. 이 파일에는 아직 그 파일들로 옮기지 않은 범용 typography 유틸리티
+ * (text-size/font-weight 스케일)와 breakpoint만 남아 있다.
+ *
+ * 합성 타이포그래피 토큰(Figma Text Style 단위)은 ./typography.tokens.css의
+ * @utility 클래스 참고.
  *
  * 규칙은 ./README.md 참고.
  */
 
 @theme {
-  /* Color — Figma 실제 데이터로 동기화됨. ./colors.tokens.css 참고 (이 파일에서는 정의하지 않음). */
+  /* Color — ./colors.tokens.css 참고 (이 파일에서는 정의하지 않음) */
+  /* Spacing — ./spacing.tokens.css 참고 (이 파일에서는 정의하지 않음) */
+  /* Radius — ./radius.tokens.css 참고 (이 파일에서는 정의하지 않음) */
+  /* Shadow — ./effects.tokens.css 참고 (이 파일에서는 정의하지 않음) */
 
-  /* Spacing — Tailwind 기본 배수 스케일 유지 */
-  --spacing: 0.25rem;
-  /* Spacing — 의미 기반 별칭 */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 0.75rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
+  /* Typography — font family (Figma 동기화: Pretendard Variable) */
+  --font-sans: 'Pretendard Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-  /* Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-full: 9999px;
-
-  /* Typography — font family */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-
-  /* Typography — font size (+ line-height) */
+  /* Typography — font size (+ line-height). sm/base는 Figma 실측값(Caption Base
+     13/20, Body Base 15/22)으로 정확히 맞춤 — xs/lg/xl/2xl은 아직 실사용처가
+     없어 범용 placeholder로 유지 (필요해지면 그때 실제 Figma 값으로 교체). */
   --text-xs: 0.75rem;
   --text-xs--line-height: 1rem;
-  --text-sm: 0.875rem;
-  --text-sm--line-height: 1.25rem;
-  --text-base: 1rem;
-  --text-base--line-height: 1.5rem;
+  --text-sm: 13px;
+  --text-sm--line-height: 20px;
+  --text-base: 15px;
+  --text-base--line-height: 22px;
   --text-lg: 1.125rem;
   --text-lg--line-height: 1.75rem;
   --text-xl: 1.25rem;
@@ -43,16 +38,11 @@
   --text-2xl: 1.5rem;
   --text-2xl--line-height: 2rem;
 
-  /* Typography — font weight */
+  /* Typography — font weight (400/500/700은 Figma 실측값, 600은 Figma에 없는 범용 placeholder) */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-
-  /* Shadow */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   /* Breakpoint */
   --breakpoint-sm: 640px;

@@ -1,0 +1,17 @@
+/**
+ * Radius Tokens — Figma 동기화됨
+ *
+ * 출처: Figma "[NHN] 실습 디자인시스템 (Copy)" (fileKey=TsK9PNhDrcyBIRYiEWs0Pr)
+ *   Radius 변수 컬렉션 (use_figma로 전체 조회, 3개 전부)
+ *
+ * 이전 placeholder(--radius-sm/md/lg/full = 4/8/12px/9999px)는 전부 틀렸음 — 실제
+ * Figma 스케일은 1/2/18px 3단계뿐이다. Figma 이름 그대로(`radius/2` → `--radius-2`)
+ * 노출한다. 완전한 원(pill)이 필요하면 이 스케일이 아니라 Tailwind 기본 키워드
+ * `rounded-full`(9999px)을 그대로 쓴다 — Figma에도 별도의 "full" 토큰은 없음.
+ */
+
+@theme {
+  --radius-1: 1px;
+  --radius-2: 2px;
+  --radius-18: 18px;
+}

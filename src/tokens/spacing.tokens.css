@@ -1,0 +1,44 @@
+/**
+ * Spacing Tokens — Figma 동기화됨
+ *
+ * 출처: Figma "[NHN] 실습 디자인시스템 (Copy)" (fileKey=TsK9PNhDrcyBIRYiEWs0Pr)
+ *   Spacing 변수 컬렉션 (use_figma로 전체 조회, 18개)
+ *
+ * Figma의 "Spacing" 컬렉션은 `scale/N` 이름 그대로 N px를 의미하는 리터럴 스케일이다
+ * (예: scale/12 = 12px). Tailwind v4의 기본 숫자 스케일(`p-12` 등, `--spacing` 배수 기반)과
+ * 이름이 겹치므로, 여기서는 `--spacing-scale-N`으로 네임스페이스를 분리해 정의한다
+ * (→ 유틸리티 클래스는 `p-scale-12` 형태). Tailwind 기본 숫자 유틸리티(`p-1`,`gap-4` 등)의
+ * 기존 동작(= N * --spacing 배수)은 그대로 유지되며 이 파일과 충돌하지 않는다.
+ */
+
+@theme {
+  /* Tailwind 기본 숫자 스케일의 배수 단위 (변경하지 않음 — 기존 컴포넌트의 p-3/gap-md 등이 이 값에 의존) */
+  --spacing: 0.25rem;
+
+  /* Figma 원본 스케일 (scale/N = N px), 그대로 노출 */
+  --spacing-scale-1: 1px;
+  --spacing-scale-2: 2px;
+  --spacing-scale-4: 4px;
+  --spacing-scale-5: 5px;
+  --spacing-scale-6: 6px;
+  --spacing-scale-8: 8px;
+  --spacing-scale-10: 10px;
+  --spacing-scale-11: 11px;
+  --spacing-scale-12: 12px;
+  --spacing-scale-13: 13px;
+  --spacing-scale-15: 15px;
+  --spacing-scale-16: 16px;
+  --spacing-scale-20: 20px;
+  --spacing-scale-24: 24px;
+  --spacing-scale-25: 25px;
+  --spacing-scale-26: 26px;
+  --spacing-scale-30: 30px;
+  --spacing-scale-50: 50px;
+
+  /* 의미 기반 별칭 — 자주 쓰는 스케일 값에 대한 짧은 이름. 전부 위 scale-N과 정확히 일치. */
+  --spacing-xs: var(--spacing-scale-8);
+  --spacing-sm: var(--spacing-scale-12);
+  --spacing-md: var(--spacing-scale-16);
+  --spacing-lg: var(--spacing-scale-24);
+  --spacing-xl: var(--spacing-scale-30);
+}

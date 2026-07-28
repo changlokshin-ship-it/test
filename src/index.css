@@ -1,3 +1,7 @@
 @import "tailwindcss";
 @import "./tokens/design-tokens.css";
 @import "./tokens/colors.tokens.css";
+@import "./tokens/spacing.tokens.css";
+@import "./tokens/radius.tokens.css";
+@import "./tokens/effects.tokens.css";
+@import "./tokens/typography.tokens.css";

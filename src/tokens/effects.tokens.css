@@ -1,0 +1,15 @@
+/**
+ * Effect (Shadow) Tokens — Figma 동기화됨
+ *
+ * 출처: Figma "[NHN] 실습 디자인시스템 (Copy)" (fileKey=TsK9PNhDrcyBIRYiEWs0Pr)
+ *   이펙트 스타일 "shadow" (use_figma로 실제 값 조회)
+ *   drop-shadow, blur 30, offset (0, 10), color #000 opacity 0.25
+ *
+ * 이전 placeholder(--shadow-sm/md/lg 3단계, 임의 값)는 전부 틀렸음 — 실제 Figma
+ * 디자인 시스템에는 이름 없는 이펙트 스타일 "shadow" 단 하나만 존재한다. Tailwind
+ * 유틸리티가 `shadow`(접미사 없음)로 노출되도록 `--shadow`로 정의한다.
+ */
+
+@theme {
+  --shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+}

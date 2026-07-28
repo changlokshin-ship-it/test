@@ -1,0 +1,93 @@
+/**
+ * Typography Tokens — Figma 동기화됨
+ *
+ * 출처: Figma "[NHN] 실습 디자인시스템 (Copy)" (fileKey=TsK9PNhDrcyBIRYiEWs0Pr)
+ *   합성 타이포그래피 토큰 10개 (get_variable_defs로 조회)
+ *
+ * 이 토큰들은 font-family+size+weight+line-height가 함께 묶인 합성값이라
+ * CSS 커스텀 프로퍼티(@theme)가 아니라 Tailwind v4 `@utility` 클래스로 만든다.
+ * 개별 조각(글자 크기만, 굵기만)이 필요하면 design-tokens.css의 범용
+ * text-size / font-weight 유틸리티를 대신 쓴다.
+ *
+ * 매핑 테이블은 ../../docs/design-tokens.md 참고.
+ */
+
+@utility text-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 50px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-1 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-2 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 34px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-4 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 44px;
+  letter-spacing: 0;
+}
+
+@utility text-body-large {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@utility text-body-base {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+@utility text-body-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-base {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
